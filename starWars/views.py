@@ -5,8 +5,8 @@ from starWars.forms import CharacterForm
 
 # Create your views here.
 def index(request):
-    context = {'data': 'test render'}
-    return render(request, 'starWars/index.html', context)
+    # context = {'data': 'test render'}
+    return render(request, 'starWars/index.html')
 
 
 def uploadCharacters(request):

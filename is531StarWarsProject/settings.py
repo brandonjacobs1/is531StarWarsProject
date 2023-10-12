@@ -68,12 +68,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'starWars.apps.StarwarsConfig',
     'storages',
-    # 'bootstrap5',
-    # 'crispy_forms',
-    # 'crispy_bootstrap5',
+    'bootstrap5',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
-# CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
-# CRISPY_TEMPLATE_PACK = "bootstrap5"
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 
 MIDDLEWARE = [
