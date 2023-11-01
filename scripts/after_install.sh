@@ -17,4 +17,4 @@ install requirements.txt
 pip install -r /home/ubuntu/django-aws_cicd/requirements.txt
 
 # run server
-screen -d -m python3 manage.py runserver 0:8000
+screen -L -Logfile logfile.txt -d -m python3 manage.py runserver 0:8000
