@@ -13,12 +13,13 @@ phases:
       - echo Building the Docker image...
       - docker build -t star-wars .
       - docker tag star-wars:latest 066793775137.dkr.ecr.us-east-2.amazonaws.com/star-wars:latest
+      - printf '[{"name":"project2container","imageUri":"066793775137.dkr.ecr.us-east-2.amazonaws.com/star-wars"}]' 066793775137.dkr.ecr.us-east-2.amazonaws.com/star-wars:latest > imagedefinitions.json
+
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push 066793775137.dkr.ecr.us-east-2.amazonaws.com/star-wars:latest
-      - printf '[{"name":"project2container","imageUri":"066793775137.dkr.ecr.us-east-2.amazonaws.com/star-wars"}]' 066793775137.dkr.ecr.us-east-2.amazonaws.com/star-wars:latest > imagedefinitions.json
 
 artifacts:
   files: imagedefinitions.json
