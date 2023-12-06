@@ -22,4 +22,6 @@ phases:
       - docker push 066793775137.dkr.ecr.us-east-2.amazonaws.com/star-wars:latest
 
 artifacts:
-  files: imagedefinitions.json
+  files:
+    - imagedefinitions.json
+    - task-definition.json
